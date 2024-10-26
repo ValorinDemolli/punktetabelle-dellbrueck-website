@@ -7,142 +7,134 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="spiele.html">Spiele</a></li>
-        </ul>
-    </nav>
+    <div class="wrapper"> <!-- Wrapper hinzugefügt -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="spiele.html">Spiele</a></li>
+            </ul>
+        </nav>
 
-    <h1>Spieler</h1>
-<table border="1">
-    <tbody><tr>
-        <th>Vorname</th>
-        <th>Nachname</th>
-        <th>Gespielte Spiele</th>
-        <th>Punkte</th>
-        <th>Punkte pro Spiel</th>
-    </tr>
-    
-    <tr>
-        <td>Rowan</td>  <!-- Vorname -->
-        <td>Dekker</td>  <!-- Nachname -->
-        <td>2</td>  <!-- Gespielte Spiele -->
-        <td>37</td>  <!-- Punkte -->
-        <td>18.50  <!-- Mit 2 Dezimalstellen --></td>
-    </tr>
-    
-    <tr>
-        <td>Clemens</td>  <!-- Vorname -->
-        <td>Hochreuter</td>  <!-- Nachname -->
-        <td>3</td>  <!-- Gespielte Spiele -->
-        <td>28</td>  <!-- Punkte -->
-        <td>9.33</td>  <!-- Mit 2 Dezimalstellen -->
-    </tr>
-    
-    <tr>
-        <td>Arthur</td>  <!-- Vorname -->
-        <td>Hayna</td>  <!-- Nachname -->
-        <td>2</td>  <!-- Gespielte Spiele -->
-        <td>27</td>  <!-- Punkte -->
-        <td>13.50</td>  <!-- Mit 2 Dezimalstellen -->
-    </tr>
-    
-    <tr>
-        <td>Jan</td>  <!-- Vorname -->
-        <td>Michaelis</td>  <!-- Nachname -->
-        <td>3</td>  <!-- Gespielte Spiele -->
-        <td>11</td>  <!-- Punkte -->
-        <td>3.67</td>  <!-- Mit 2 Dezimalstellen -->
-    </tr>
-    
-    <tr>
-        <td>Gaius</td>  <!-- Vorname -->
-        <td>Ariole</td>  <!-- Nachname -->
-        <td>2</td>  <!-- Gespielte Spiele -->
-        <td>10</td>  <!-- Punkte -->
-        <td>5</td>  <!-- Ganzzahlig ohne Dezimalstellen -->
-    </tr>
-    
-    <tr>
-        <td>Bardia</td>  <!-- Vorname -->
-        <td>Navid</td>  <!-- Nachname -->
-        <td>3</td>  <!-- Gespielte Spiele -->
-        <td>8</td>  <!-- Punkte -->
-        <td>2.67</td>  <!-- Mit 2 Dezimalstellen -->
-    
-    <tr>
-        <td>Elias</td>  <!-- Vorname -->
-        <td>Eiblmaier</td>  <!-- Nachname -->
-        <td>1</td>  <!-- Gespielte Spiele -->
-        <td>7</td>  <!-- Punkte -->
-        <td>7</td>  <!-- Ganzzahlig ohne Dezimalstellen -->
-    </tr>
-    
-    <tr>
-        <td>Tim</td>  <!-- Vorname -->
-        <td>Nachtigall</td>  <!-- Nachname -->
-        <td>1</td>  <!-- Gespielte Spiele -->
-        <td>6</td>  <!-- Punkte -->
-        <td>6</td>  <!-- Ganzzahlig ohne Dezimalstellen -->
-    </tr>
-    
-    <tr>
-        <td>Tim</td>  <!-- Vorname -->
-        <td>Falk</td>  <!-- Nachname -->
-        <td>2</td>  <!-- Gespielte Spiele -->
-        <td>4</td>  <!-- Punkte -->
-        <td>2</td>  <!-- Ganzzahlig ohne Dezimalstellen -->
-    </tr>
-    
-    <tr>
-        <td>Erind</td>  <!-- Vorname -->
-        <td>Demolli</td>  <!-- Nachname -->
-        <td>3</td>  <!-- Gespielte Spiele -->
-        <td>4</td>  <!-- Punkte -->
-        <td>1.33</td>  <!-- Mit 2 Dezimalstellen -->
-    </tr>
-    
-    <tr>
-        <td>Torben</td>  <!-- Vorname -->
-        <td>Willke</td>  <!-- Nachname -->
-        <td>2</td>  <!-- Gespielte Spiele -->
-        <td>3</td>  <!-- Punkte -->
-        <td>1.50</td>  <!-- Mit 2 Dezimalstellen -->
-    </tr>
-    
-    <tr>
-        <td>Valorin</td>  <!-- Vorname -->
-        <td>Demolli</td>  <!-- Nachname -->
-        <td>3</td>  <!-- Gespielte Spiele -->
-        <td>2</td>  <!-- Punkte -->
-        <td>0.67</td>  <!-- Mit 2 Dezimalstellen -->
-    </tr>
-    
-    <tr>
-        <td>Florian</td>  <!-- Vorname -->
-        <td>Lahne</td>  <!-- Nachname -->
-        <td>2</td>  <!-- Gespielte Spiele -->
-        <td>2</td>  <!-- Punkte -->
-        <td>1</td>  <!-- Ganzzahlig ohne Dezimalstellen -->
-    </tr>
-    
-    <tr>
-        <td>Henry</td>  <!-- Vorname -->
-        <td>Schumann</td>  <!-- Nachname -->
-        <td>1</td>  <!-- Gespielte Spiele -->
-        <td>2</td>  <!-- Punkte -->
-        <td>2</td>  <!-- Ganzzahlig ohne Dezimalstellen -->
-    </tr>
-    
-    <tr>
-        <td>Henry</td>  <!-- Vorname -->
-        <td>Weber</td>  <!-- Nachname -->
-        <td>1</td>  <!-- Gespielte Spiele -->
-        <td>0</td>  <!-- Punkte -->
-        <td>0 </td><!-- Ganzzahlig ohne Dezimalstellen -->
-    </tr>
-    
-</tbody></table>
+        <h1>Spieler</h1>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Vorname</th>
+                    <th>Nachname</th>
+                    <th>Gespielte Spiele</th>
+                    <th>Punkte</th>
+                    <th>Punkte pro Spiel</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Rowan</td>
+                    <td>Dekker</td>
+                    <td>2</td>
+                    <td>37</td>
+                    <td>18.50</td>
+                </tr>
+                <tr>
+                    <td>Clemens</td>
+                    <td>Hochreuter</td>
+                    <td>3</td>
+                    <td>28</td>
+                    <td>9.33</td>
+                </tr>
+                <tr>
+                    <td>Arthur</td>
+                    <td>Hayna</td>
+                    <td>2</td>
+                    <td>27</td>
+                    <td>13.50</td>
+                </tr>
+                <tr>
+                    <td>Jan</td>
+                    <td>Michaelis</td>
+                    <td>3</td>
+                    <td>11</td>
+                    <td>3.67</td>
+                </tr>
+                <tr>
+                    <td>Gaius</td>
+                    <td>Ariole</td>
+                    <td>2</td>
+                    <td>10</td>
+                    <td>5.00</td>
+                </tr>
+                <tr>
+                    <td>Bardia</td>
+                    <td>Navid</td>
+                    <td>3</td>
+                    <td>8</td>
+                    <td>2.67</td>
+                </tr>
+                <tr>
+                    <td>Elias</td>
+                    <td>Eiblmaier</td>
+                    <td>1</td>
+                    <td>7</td>
+                    <td>7.00</td>
+                </tr>
+                <tr>
+                    <td>Tim</td>
+                    <td>Nachtigall</td>
+                    <td>1</td>
+                    <td>6</td>
+                    <td>6.00</td>
+                </tr>
+                <tr>
+                    <td>Tim</td>
+                    <td>Falk</td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>2.00</td>
+                </tr>
+                <tr>
+                    <td>Erind</td>
+                    <td>Demolli</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>1.33</td>
+                </tr>
+                <tr>
+                    <td>Torben</td>
+                    <td>Willke</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>1.50</td>
+                </tr>
+                <tr>
+                    <td>Valorin</td>
+                    <td>Demolli</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>0.67</td>
+                </tr>
+                <tr>
+                    <td>Florian</td>
+                    <td>Lahne</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>1.00</td>
+                </tr>
+                <tr>
+                    <td>Henry</td>
+                    <td>Schumann</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>2.00</td>
+                </tr>
+                <tr>
+                    <td>Henry</td>
+                    <td>Weber</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0.00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div> <!-- Ende des Wrappers -->
 </body>
 </html>
