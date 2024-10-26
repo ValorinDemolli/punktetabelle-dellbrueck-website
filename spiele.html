@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spieleliste</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="style.css">
 </head>
 <body>
     <nav class="navbar">
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/spieler">Spieler</a></li>
-            <li><a href="/statistik">Statistik</a></li>
+            <li><a href="homescreen.html">Home</a></li>
+            <li><a href="spieler.html">Spieler</a></li>
+            <li><a href="statistik.html">Statistik</a></li>
         </ul>
     </nav>
 
@@ -40,18 +40,5 @@
         </tr>
         {% endfor %}
     </table>
-
-    <h2>Neue Spiele hinzufügen</h2>
-    <form action="/spiele_hinzufuegen" method="POST">
-        <input type="text" name="heimteam" placeholder="Name Heimteam" required>
-        <input type="text" name="gastteam" placeholder="Name Gastteam" required>
-        <input type="text" name="datum" placeholder="Datum" required>
-        <input type="text" name="endstand" placeholder="Endstand" required>
-        <input type="text" name="punkte_erstes_viertel" placeholder="Punkte erstes Viertel" required>
-        <input type="text" name="punkte_zweites_viertel" placeholder="Punkte zweites Viertel" required>
-        <input type="text" name="punkte_drittes_viertel" placeholder="Punkte drittes Viertel" required>
-        <input type="text" name="punkte_viertes_viertel" placeholder="Punkte viertes Viertel" required>
-        <button type="submit">Hinzufügen</button>
-    </form>
 </body>
 </html>
