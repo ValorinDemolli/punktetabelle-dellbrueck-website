@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spielerliste</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/spiele">Spiele</a></li>
+            <li><a href="/statistik">Statistik</a></li>
+        </ul>
+    </nav>
+
+    <h1>Spieler</h1>
+<h2>Spieler sortieren nach:</h2>
+<form action="/spieler" method="GET">
+    <select name="sort_by">
+        <option value="vorname">Vorname</option>
+        <option value="nachname">Nachname</option>
+        <option value="gespielte_spiele">Gespielte Spiele</option>
+        <option value="punkte">Punkte</option>
+        <option value="punkte_pro_spiel">Punkte pro Spiel</option>
+    </select>
+    <button type="submit">Sortieren</button>
+</form>
+<table border="1">
+    <tr>
+        <th>Vorname</th>
+        <th>Nachname</th>
+        <th>Gespielte Spiele</th>
+        <th>Punkte</th>
+        <th>Punkte pro Spiel</th>
+        <th>Bearbeiten</th>
+    </tr>
+    {% for s in spieler %}
+    <tr>
+        <td>{{ s[1] }}</td>  <!-- Vorname -->
+        <td>{{ s[2] }}</td>  <!-- Nachname -->
+        <td>{{ s[4] }}</td>  <!-- Gespielte Spiele -->
+        <td>{{ s[3] }}</td>  <!-- Punkte -->
+        <td>
+            {% if s[5] is not none %}
+                {% set punkte_pro_spiel = s[5] | round(2) %}
+                {% if punkte_pro_spiel == punkte_pro_spiel | round(0) %}
+                    {{ punkte_pro_spiel | round(0) }}  <!-- Ganzzahlig ohne Dezimalstellen -->
+                {% else %}
+                    {{ punkte_pro_spiel }}  <!-- Mit 2 Dezimalstellen -->
+                {% endif %}
+            {% else %}
+                0  <!-- Standardwert, wenn die Punkte nicht definiert sind -->
+            {% endif %}
+        </td>
+        <td>
+            <form action="/spieler_bearbeiten" method="POST">
+                <input type="hidden" name="spieler_id" value="{{ s[0] }}">
+                <input type="text" name="spieler_vorname" value="{{ s[1] }}" required>
+                <input type="text" name="spieler_nachname" value="{{ s[2] }}" required>
+                <button type="submit">Ändern</button>
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+    <h2>Neuen Spieler hinzufügen</h2>
+    <form action="/spieler_hinzufuegen" method="POST">
+        <input type="text" name="vorname" placeholder="Vorname" required>
+        <input type="text" name="nachname" placeholder="Nachname" required>
+        <button type="submit">Hinzufügen</button>
+    </form>
+
+    <h2>Punkte hinzufügen</h2>
+    <form action="/punkte_eintragen" method="POST">
+        <label for="spieler_vorname">Vorname:</label>
+        <input type="text" id="spieler_vorname" name="spieler_vorname" required>
+
+        <label for="spieler_nachname">Nachname:</label>
+        <input type="text" id="spieler_nachname" name="spieler_nachname" required>
+
+        <label for="punkte">Punkte:</label>
+        <input type="number" id="punkte" name="punkte" required>
+
+        <label for="gespielte_spiele">Gespielte Spiele:</label>
+        <input type="number" id="gespielte_spiele" name="gespielte_spiele" required>
+
+        <button type="submit">Punkte und Spiele eintragen</button>
+    </form>
+
+</body>
+</html>

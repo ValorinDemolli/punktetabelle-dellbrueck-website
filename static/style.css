@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+h1 {
+    color: #333;
+}
+
+a{
+    color: blue ;
+}
+
+.navbar {
+    background-color: #333; /* Hintergrundfarbe des Menüs */
+    overflow: hidden; /* Verhindert Überlauf von Elementen */
+    position: fixed; /* Macht das Menü oben fixiert */
+    top: 0;
+    width: 100%; /* Menübalken über die volle Breite */
+    z-index: 1000; /* Damit das Menü immer oben bleibt */
+}
+
+.navbar ul {
+    list-style-type: none; /* Entfernt die Punkte der Liste */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Flexbox für horizontale Ausrichtung */
+    justify-content: center; /* Zentriere die Elemente */
+}
+
+.navbar ul li {
+    display: inline; /* Listenelemente werden nebeneinander angezeigt */
+}
+
+.navbar ul li a {
+    display: block;
+    color: white; /* Textfarbe des Menüs */
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none; /* Unterstreichung entfernen */
+}
+
+.navbar ul li a:hover {
+    background-color: #575757; /* Hintergrundfarbe bei Hover */
+}
+
+/* Abstand zum Inhalt der Seite (da das Menü fixiert ist) */
+body {
+    padding-top: 50px; /* Platz schaffen, damit der Inhalt nicht hinter dem Menü liegt */
+}

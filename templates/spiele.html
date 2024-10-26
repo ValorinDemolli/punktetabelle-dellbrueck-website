@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spieleliste</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/spieler">Spieler</a></li>
+            <li><a href="/statistik">Statistik</a></li>
+        </ul>
+    </nav>
+
+    <h1>Spiele</h1>
+    <table border="1">
+        <tr>
+            <th>Heim</th>
+            <th>Gast</th>
+            <th>Datum (YYYY-MM-DD)</th>
+            <th>Endstand</th>
+            <th>1. Viertel</th>
+            <th>2. Viertel</th>
+            <th>3. Viertel</th>
+            <th>4. Viertel</th>
+        </tr>
+        {% for spiel in spiele %}
+        <tr>
+            <td>{{ spiel[1] }}</td>
+            <td>{{ spiel[2] }}</td>
+            <td>{{ spiel[3] }}</td>
+            <td>{{ spiel[4] }}</td>
+            <td>{{ spiel[5] }}</td>  
+            <td>{{ spiel[6] }}</td>  
+            <td>{{ spiel[7] }}</td>  
+            <td>{{ spiel[8] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Neue Spiele hinzufügen</h2>
+    <form action="/spiele_hinzufuegen" method="POST">
+        <input type="text" name="heimteam" placeholder="Name Heimteam" required>
+        <input type="text" name="gastteam" placeholder="Name Gastteam" required>
+        <input type="text" name="datum" placeholder="Datum" required>
+        <input type="text" name="endstand" placeholder="Endstand" required>
+        <input type="text" name="punkte_erstes_viertel" placeholder="Punkte erstes Viertel" required>
+        <input type="text" name="punkte_zweites_viertel" placeholder="Punkte zweites Viertel" required>
+        <input type="text" name="punkte_drittes_viertel" placeholder="Punkte drittes Viertel" required>
+        <input type="text" name="punkte_viertes_viertel" placeholder="Punkte viertes Viertel" required>
+        <button type="submit">Hinzufügen</button>
+    </form>
+</body>
+</html>
