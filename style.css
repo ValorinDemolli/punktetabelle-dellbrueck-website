@@ -82,7 +82,7 @@ a:hover {
 }
 
 /* Media Queries für mobile Ansichten */
-@media (max-width: 600px) {
+@media only screen and (max-width: 600px) {
     .navbar ul {
         flex-direction: column; /* Menü-Elemente vertikal anordnen */
     }
