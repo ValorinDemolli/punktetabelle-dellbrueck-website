@@ -82,7 +82,7 @@ a:hover {
 }
 
 /* Media Queries für mobile Ansichten */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .navbar ul {
         flex-direction: column; /* Menü-Elemente vertikal anordnen */
     }
@@ -97,6 +97,12 @@ a:hover {
 
     body {
         padding-top: 100px; /* Mehr Platz oberhalb für das Menü auf mobilen Geräten */
+    }
+
+    table {
+        display: block; /* Tabelle blockieren */
+        overflow-x: auto; /* Horizontalen Scrollbalken hinzufügen */
+        white-space: nowrap; /* Verhindert Zeilenumbrüche in den Zellen */
     }
 }
 
