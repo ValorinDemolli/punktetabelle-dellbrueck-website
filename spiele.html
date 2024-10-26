@@ -4,20 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spieleliste</title>
-    <link href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="navbar">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="spieler.html">Spieler</a></li>
-            <li><a href="statistik.html">Statistik</a></li>
         </ul>
     </nav>
 
     <h1>Spiele</h1>
     <table border="1">
-        <tr>
+        <tbody><tr>
             <th>Heim</th>
             <th>Gast</th>
             <th>Datum (YYYY-MM-DD)</th>
@@ -27,18 +26,40 @@
             <th>3. Viertel</th>
             <th>4. Viertel</th>
         </tr>
-        {% for spiel in spiele %}
+        
         <tr>
-            <td>{{ spiel[1] }}</td>
-            <td>{{ spiel[2] }}</td>
-            <td>{{ spiel[3] }}</td>
-            <td>{{ spiel[4] }}</td>
-            <td>{{ spiel[5] }}</td>  
-            <td>{{ spiel[6] }}</td>  
-            <td>{{ spiel[7] }}</td>  
-            <td>{{ spiel[8] }}</td>
+            <td>DTV Basketball Köln U19</td>
+            <td>TV Dellbrück U19</td>
+            <td>2024-09-12</td>
+            <td>50 : 60</td>
+            <td>10 : 15</td>  
+            <td>7 : 8</td>  
+            <td>15 : 22</td>  
+            <td>18 : 15</td>
         </tr>
-        {% endfor %}
-    </table>
+        
+        <tr>
+            <td>Rheinstars Köln U19</td>
+            <td>TV Dellbrück U19</td>
+            <td>2024-09-26</td>
+            <td>77 : 39</td>
+            <td>14 : 10</td>  
+            <td>22 : 10</td>  
+            <td>16 : 7</td>  
+            <td>25 : 12</td>
+        </tr>
+        
+        <tr>
+            <td>TV Dellbrück U19</td>
+            <td>DJK Köln Ost</td>
+            <td>2024-10-06</td>
+            <td>50 : 90</td>
+            <td>8 : 27</td>  
+            <td>17 : 16</td>  
+            <td>8 : 24</td>  
+            <td>17 : 23</td>
+        </tr>
+        
+    </tbody></table>
 </body>
 </html>
