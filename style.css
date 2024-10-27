@@ -1,17 +1,22 @@
 /* Basis-Styles für den Body */
 body {
     font-family: Arial, sans-serif;
-    color: #333; /* Standardfarbe für Text */
-    line-height: 1.6; /* Bessere Lesbarkeit durch Zeilenhöhe */
-    padding-top: 50px; /* Platz schaffen, damit der Inhalt nicht hinter dem fixierten Menü liegt */
-    margin: 0; /* Entfernt den Standard-Rand des Body */
+    color: #333;
+    line-height: 1.6;
+    padding-top: 70px; /* Platz schaffen, damit der Inhalt nicht hinter dem fixierten Menü liegt */
+    margin: 0;
 }
-
+/* Header-Styles */
+h1 {
+    color: #333;
+    font-size: 2em; /* Angepasste Schriftgröße für besseren Fokus */
+    text-align: center;
+    margin: 20px 0; /* Abstand oberhalb und unterhalb des Headers */
+}
 /* Tabellen-Styles */
 table {
     width: 100%;
     border-collapse: collapse;
-    table-layout: fixed;
 }
 
 th, td {
@@ -24,14 +29,6 @@ th, td {
 th {
     background-color: #f2f2f2;
     font-weight: bold; /* Dickere Schrift im Tabellenkopf */
-}
-
-/* Header-Styles */
-h1 {
-    color: #333;
-    font-size: 2em; /* Angepasste Schriftgröße für besseren Fokus */
-    text-align: center;
-    margin: 20px 0; /* Abstand oberhalb und unterhalb des Headers */
 }
 
 /* Link-Styles */
@@ -59,7 +56,7 @@ a:hover {
     margin: 0;
     padding: 0;
     display: flex; /* Flexbox für horizontale Ausrichtung */
-    justify-content: center; /* Zentriere die Elemente */
+    justify-content: center; /* Zentriert die Elemente */
     align-items: center; /* Vertikal zentrieren */
 }
 
@@ -79,36 +76,4 @@ a:hover {
 
 .navbar ul li a:hover {
     background-color: #575757; /* Hintergrundfarbe bei Hover */
-}
-
-/* Media Queries für mobile Ansichten */
-@media only screen and (max-width: 600px) {
-    .navbar ul {
-        flex-direction: column; /* Menü-Elemente vertikal anordnen */
-    }
-
-    .navbar ul li {
-        width: 100%; /* Breite der Listenelemente auf 100% setzen */
-    }
-
-    .navbar ul li a {
-        padding: 10px; /* Weniger Padding auf kleineren Bildschirmen */
-    }
-
-    body {
-        padding-top: 100px; /* Mehr Platz oberhalb für das Menü auf mobilen Geräten */
-    }
-
-    table {
-        display: block; /* Tabelle blockieren */
-        overflow-x: auto; /* Horizontalen Scrollbalken hinzufügen */
-        white-space: nowrap; /* Verhindert Zeilenumbrüche in den Zellen */
-    }
-}
-
-/* Styles für den Wrapper */
-.wrapper {
-    position: relative;
-    overflow-x: hidden; /* Verhindert horizontales Scrollen */
-    padding: 20px; /* Angenehmer Abstand innerhalb des Wrappers */
 }
